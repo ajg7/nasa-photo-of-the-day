@@ -2,6 +2,9 @@ import React from "react";
 import "../App.css";
 
 function Photo(props) {
+    if (!props.photoObj) {
+        return <h3>Loading...</h3>
+    }
   const { url, title, copyright, date, explanation } = props.photoObj;
   return (
     <div>

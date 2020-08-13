@@ -4,7 +4,7 @@ import axios from "axios";
 import Photo from "./Components/Photo.js"
 
 function App() {
-  const [photoObj, setPhotoObj] = useState({});
+  const [photoObj, setPhotoObj] = useState(null);
 
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
