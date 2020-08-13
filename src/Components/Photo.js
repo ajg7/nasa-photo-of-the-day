@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 
+
 function Photo(props) {
     if (!props.photoObj) {
         return <h3>Loading...</h3>
