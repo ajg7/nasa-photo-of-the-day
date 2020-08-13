@@ -7,7 +7,7 @@ function App() {
   const [photoObj, setPhotoObj] = useState({});
 
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-08-12")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
     .then(response => {
       const { url, title, copyright, date, explanation } = response.data;
       const photoObj = {
@@ -26,10 +26,7 @@ function App() {
   
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <h1>NASA Photo of the Day</h1>
       <Photo photoObj={photoObj}/>
     </div>
   );
