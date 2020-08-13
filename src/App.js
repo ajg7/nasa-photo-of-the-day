@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
+import Photo from "./Components/Photo.js"
 
 function App() {
-  const [photoObj, setPhotoObj] = useState(null);
+  const [photoObj, setPhotoObj] = useState({});
 
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-08-12")
     .then(response => {
-      const { hdurl, title, copyright, date, explanation } = response.data;
+      const { url, title, copyright, date, explanation } = response.data;
       const photoObj = {
-        hdurl: hdurl,
+        url: url,
         title: title,
         copyright: copyright,
         date: date,
@@ -35,6 +36,3 @@ function App() {
 }
 
 export default App;
-
-
-{/*https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-08-12*/}
