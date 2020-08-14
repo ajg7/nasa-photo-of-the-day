@@ -10,13 +10,13 @@ const kf = keyframes`
 
 `
 const StyledPhoto = styled.div`
-  background-color: ${props => props.theme.primaryColor};
-  opacity: 0;
+  background-color: ${({ theme }) => theme.primaryColor};
+  opacity: ${({ theme }) => theme.opacity};;
   transform: scale(10) rotateZ(180deg);
   animation: ${kf} 0.5s ease-in-out forwards;
   h2, h3, .date, p {
-    color: ${props => props.theme.tertiaryColor};
-    font-weight: ${props => props.theme.bolded};
+    color: ${({ theme }) => theme.tertiaryColor};
+    font-weight: ${({ theme }) => theme.bolded};
   }
 `
 

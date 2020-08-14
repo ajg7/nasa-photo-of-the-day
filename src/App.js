@@ -6,10 +6,10 @@ import styled from "styled-components"
 
 
 const StyledHeader = styled.div`
-  background-color: ${props => props.theme.primaryColor};
-  color: ${props => props.theme.tertiaryColor};
-  text-shadow: 1px 1px ${props => props.theme.secondaryColor};
-  box-shadow: 12px 12px ${props => props.theme.secondaryColor};
+  background-color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.tertiaryColor};
+  text-shadow: 1px 1px ${({ theme }) => theme.secondaryColor};
+  box-shadow: 12px 12px ${({ theme }) => theme.secondaryColor};
   border: 5px solid;
 
 
@@ -25,7 +25,7 @@ function App() {
   const [photoObj, setPhotoObj] = useState(null);
 
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-08-11")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-08-3")
     .then(response => {
       const { url, title, copyright, date, explanation } = response.data;
       const photoObj = {
