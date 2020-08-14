@@ -1,9 +1,8 @@
 const theme = {
     primaryColor: '#00076f',
-    secondaryColor: '#44008b',
-    tertiaryColor: '#9f45b0',
-    quaternaryColor: '#e54ed0',
-    quinaryColor: '#ffe4f2',
+    secondaryColor: '#ffe4f2',
+    tertiaryColor: '#e54ed0',
+    bolded: "bold",
 }
 
 export default theme;
