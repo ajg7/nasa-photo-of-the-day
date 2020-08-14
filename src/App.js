@@ -18,9 +18,6 @@ const StyledHeader = styled.div`
     }
 `
 
-
-
-
 function App() {
   const [photoObj, setPhotoObj] = useState(null);
 
@@ -42,6 +39,7 @@ function App() {
     })
   }, [])
   
+ 
   return (
     <div className="App">
       <StyledHeader>
